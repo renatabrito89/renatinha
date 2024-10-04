@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilates Elegante</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+            body {
+          transition: background-color 0.3s, color 0.3s;
+      }
+      
+      .bg-dark {
+          background-color: #343a40 !important;
+      }
+      
+      .text-white {
+          color: #ffffff !important;
+      }
+      
+      .navbar {
+          transition: background-color 0.3s;
+      }
+      
+      header {
+          background-image: url('seu-image-header.jpg'); /* Imagem de fundo para o cabeçalho */
+          background-size: cover;
+          background-position: center;
+      }
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Pilates Elegante</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#aulas">Aulas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contato">Contato</a>
+            </li>
+        </ul>
+        <button id="modeToggle" class="btn btn-secondary ml-3">Modo Noturno</button>
+    </div>
+</nav>
+
+<header class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1>Bem-vindo ao Pilates Elegante</h1>
+        <p class="lead">Transforme seu corpo e mente com nossas aulas de pilates</p>
+        <a href="#aulas" class="btn btn-light btn-lg">Saiba Mais</a>
+    </div>
+</header>
+
+<section id="sobre" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Sobre Nós</h2>
+        <p class="text-center">Nós oferecemos aulas de pilates que ajudam a melhorar a flexibilidade, força e equilíbrio.</p>
+    </div>
+</section>
+
+<section id="aulas" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Nossas Aulas</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Aula de Iniciante</h3>
+                <p>Descubra os fundamentos do Pilates.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Aula Intermediária</h3>
+                <p>Aprimore suas habilidades e técnicas.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Aula Avançada</h3>
+                <p>Desafie-se com exercícios mais complexos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="py-5">
+    <div class="container">
+        <h2 class="text-center">Contato</h2>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer class="text-center py-4">
+    <p>&copy; 2024 Pilates Elegante. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    const modeToggle = document.getElementById('modeToggle');
+    modeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('bg-dark');
+        document.body.classList.toggle('text-white');
+        const nav = document.querySelector('.navbar');
+        nav.classList.toggle('bg-dark');
+        nav.classList.toggle('navbar-dark');
+        nav.classList.toggle('bg-light');
+        nav.classList.toggle('navbar-light');
+    });
+</script>
+
+</body>
+</html>
